@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+ 
+    <title>Como integrar Django y Bootstrap 4 </title>
+ 
+  	  {# Cargamos la librería #}
+	  {% load bootstrap4 %}
+ 
+	  {# CSS Bootstrap #}
+    {% bootstrap_css %}
+    {% block stile %}
+    {% endblock %}
+</head>
+<body>
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+  {% bootstrap_javascript jquery='full' %}
+</body>
+</html>

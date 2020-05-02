@@ -10,8 +10,8 @@ def NotasCreateView(request):
             misnotas = form.save(commit=False)
             misnotas.save()
     form = NotasForm()    
-    return render(request, 'misnotas_list.html', {'form': form})
+    return render(request, 'misnotas_create.html', {'form': form})
 
 def NotasListView(request):
-    queryset = Notas.objects.filter()
-    return render(request, 'misnotas_create.html', {'object_list':queryset})
+    queryset = Notas.objects.all()
+    return render(request, 'misnotas_list.html', {'object_list':queryset})

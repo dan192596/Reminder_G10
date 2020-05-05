@@ -21,12 +21,12 @@ from notas.views import NotasCreateView, NotasListView
 urlpatterns = [
     path('admin/', admin.site.urls),
     #path('accounts/', include('django.contrib.auth.urls')),
-    path('', TemplateView.as_view(template_name='login.html'), name='home'),
+    path('', TemplateView.as_view(template_name='login.html'), name='raiz'),
     path('home/', TemplateView.as_view(template_name='home.html'), name='home'),
     #notas
-    path('notas/', TemplateView.as_view(template_name='misnotas.html'), name='home'),
+    path('notas/', TemplateView.as_view(template_name='misnotas.html'), name='notas'),
     path('notas/list/', NotasListView, name='list_notas'),
     path('notas/create/', NotasCreateView, name='create_notas'),
-    path('notificaciones/', TemplateView.as_view(template_name='misnotificaciones.html'), name='home'),
-    path('estadisticas/', TemplateView.as_view(template_name='estadisticas.html'), name='home'),
+    path('notificaciones/', TemplateView.as_view(template_name='misnotificaciones.html'), name='notificaciones'),
+    path('estadisticas/', TemplateView.as_view(template_name='estadisticas.html'), name='estadisticas'),
 ]
